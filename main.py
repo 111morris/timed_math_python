@@ -18,21 +18,32 @@ def generate_problem():
     return expr, answer
 
 wrong = 0
-input("Press enter to start")
-print("----------------------------------")
-print("            TIMED MATH            ")
-print("__________________________________")
+
+input("\n🔢 Press Enter to start the Timed Math Challenge!")
+print("\n" + "=" * 40)
+print("         🧠 TIMED MATH QUIZ 🧠         ")
+print("=" * 40)
+
 start_time = time.time()
 
 for i in range(TOTAL_PROBLEMS):
     expr, answer = generate_problem()
     while True: 
-        guess = input("Problem #" + str(i+1) + ": " + expr + " =   ")
-        if guess == str(answer):
+        guess = input(f"Problem #{i:2}: {expr} = ")
+        if guess.strip() == str(answer):
             break
         wrong += 1
 end_time = time.time()
 
-total_time = end_time - start_time
-print("__________________________________")
-print("Nice work! You finished in", total_time, "seconds!")
+total_time = round(end_time - start_time, 2)
+print("\n" + "=" * 45)
+print("|{:^43}|".format("📊 SCOREBOARD"))
+print("|" + "_" * 43 + "|")
+print("|{:^43}|".format(""))
+print(f"|  ✅ Total Problems Solved : {TOTAL_PROBLEMS:<20}|")
+print(f"|  ❌ Incorrect Attempts     : {wrong:<20}|")
+print(f"|  ⏱️  Time Taken             : {total_time:.2f} seconds     |")
+print("|" + "_" * 43 + "|")
+print("|{:^43}|".format("Well done! 🚀 Keep practicing!"))
+print("=" * 45)
+
