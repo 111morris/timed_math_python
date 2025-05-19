@@ -19,8 +19,9 @@ def generate_problem():
 
 wrong = 0
 input("Press enter to start")
+print("----------------------------------")
+print("            TIMED MATH            ")
 print("__________________________________")
-
 start_time = time.time()
 
 for i in range(TOTAL_PROBLEMS):
@@ -30,6 +31,8 @@ for i in range(TOTAL_PROBLEMS):
         if guess == str(answer):
             break
         wrong += 1
+end_time = time.time()
 
+total_time = end_time - start_time
 print("__________________________________")
-print("Nice work!")
+print("Nice work! You finished in", total_time, "seconds!")
