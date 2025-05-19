@@ -15,5 +15,5 @@ def generate_problem():
     answer = eval(expr)
     return expr, answer
 
-generate_problem()
-
+expr, answer = generate_problem()
+print(expr, answer)
