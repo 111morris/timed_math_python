@@ -21,7 +21,7 @@ wrong = 0
 
 input("\n🔢 Press Enter to start the Timed Math Challenge!")
 print("\n" + "=" * 40)
-print("         🧠 TIMED MATH QUIZ 🧠         ")
+print("          TIMED MATH QUIZ          ")
 print("=" * 40)
 
 start_time = time.time()
@@ -37,13 +37,13 @@ end_time = time.time()
 
 total_time = round(end_time - start_time, 2)
 print("\n" + "=" * 45)
-print("|{:^43}|".format("📊 SCOREBOARD"))
+print("|{:^43}|".format(" SCOREBOARD"))
 print("|" + "_" * 43 + "|")
 print("|{:^43}|".format(""))
-print(f"|  ✅ Total Problems Solved : {TOTAL_PROBLEMS:<20}|")
-print(f"|  ❌ Incorrect Attempts     : {wrong:<20}|")
-print(f"|  ⏱️  Time Taken             : {total_time:.2f} seconds     |")
+print(f"|   Total Problems Solved : {TOTAL_PROBLEMS:<16}|")
+print(f"|   Incorrect Attempts    : {wrong:<16}|")
+print(f"|   Time Taken            : {total_time:.0f} seconds      |")
 print("|" + "_" * 43 + "|")
-print("|{:^43}|".format("Well done! 🚀 Keep practicing!"))
+print("|{:^43}|".format(" Well done! Keep practicing!"))
 print("=" * 45)
 
